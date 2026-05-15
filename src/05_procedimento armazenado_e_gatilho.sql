@@ -115,3 +115,18 @@ atualizado em tempo real dentro da tabela municipios. Isso melhora a performance
 e relatórios. A complexidade está no fato de que o gatilho é do tipo AFTER INSERT, atua em uma tabela diferente 
 daquela onde a operação ocorre (um INSERT em pessoa resulta em uma busca em pagamentos e um UPDATE em municipios), 
 e precisa garantir consistência ao verificar se o pagamento inserido é realmente o primeiro daquele beneficiário.*/
+
+/*Demonstração da Utilidade do Gatilho na Otimização da Nona Consulta*/
+-- Título: Mediana de Beneficiários Únicos por Município (Otimizada com Gatilho)
+SELECT
+    uf,
+    -- A função de mediana agora opera sobre a coluna pré-calculada
+    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY qtd_beneficiarios) AS mediana_beneficiarios_por_municipio
+FROM
+    municipios
+WHERE
+    uf != 'DF' -- Excluindo o Distrito Federal
+GROUP BY
+    uf
+ORDER BY
+    mediana_beneficiarios_por_municipio DESC;
