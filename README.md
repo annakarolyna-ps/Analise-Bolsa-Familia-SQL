@@ -81,3 +81,7 @@ Projeto desenvolvido em equipe por estudantes de Ciência da Computação — UF
 - Ester Camilly Simplício de Freitas
 
 **Orientação:** Profa. Maria Camila Nardini Barioni
+
+---
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Anna%20Santos-8A2BE2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/annakarolynaps)
+[![GitHub](https://img.shields.io/badge/GitHub-annakarolyna--ps-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/annaa-ps)
